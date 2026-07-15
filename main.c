@@ -209,7 +209,7 @@ int main() {
                 //SEGGER_RTT_printf(0, "ENC[%d]: current %d, prev %d, currentlookup %d, prevlookup %d\n", i,  current_enc_state[i],  prev_enc_state[i], lookup_table[current_enc_index[i]], lookup_table[prev_enc_index[i]]);
                 prev_enc_index[i] = current_enc_index[i];
                 prev_enc_state[i] = current_enc_state[i];
-                uint8_t cc_number = 7 + i; // Encoders 0-7 become CCs 10-17
+                uint8_t cc_number = 7 + i; // Encoders 0-7 become CCs 7-14
                 send_midi_cc(cc_number, enc_value[i]);
                 print_state();
             }
