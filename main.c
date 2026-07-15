@@ -159,6 +159,10 @@ int main() {
                 if (current_bt_state[i] == 0)
                 {
                     bt_value[i]++;
+                    send_midi_note_off(note_number, 127);
+
+                }else
+                {
                     send_midi_note_on(note_number, 127);
                 }
                 print_state();
